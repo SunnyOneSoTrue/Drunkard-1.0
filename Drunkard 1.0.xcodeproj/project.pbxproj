@@ -9,23 +9,35 @@
 /* Begin PBXBuildFile section */
 		CE9B904627D602C600728768 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B904527D602C600728768 /* AppDelegate.swift */; };
 		CE9B904827D602C600728768 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B904727D602C600728768 /* SceneDelegate.swift */; };
-		CE9B904A27D602C600728768 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B904927D602C600728768 /* ViewController.swift */; };
 		CE9B904D27D602C600728768 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9B904B27D602C600728768 /* Main.storyboard */; };
 		CE9B905027D602C600728768 /* Drunkard_1_0.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE9B904E27D602C600728768 /* Drunkard_1_0.xcdatamodeld */; };
 		CE9B905227D602C800728768 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE9B905127D602C800728768 /* Assets.xcassets */; };
 		CE9B905527D602C800728768 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9B905327D602C800728768 /* LaunchScreen.storyboard */; };
+		CE9B906127D622FC00728768 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B906027D622FC00728768 /* MapViewController.swift */; };
+		CE9B906327D6681900728768 /* GoogleService-Info (1).plist in Resources */ = {isa = PBXBuildFile; fileRef = CE9B906227D6681900728768 /* GoogleService-Info (1).plist */; };
+		CE9B906627D66A3A00728768 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = CE9B906527D66A3A00728768 /* FirebaseAnalytics */; };
+		CE9B906827D66A3A00728768 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CE9B906727D66A3A00728768 /* FirebaseAuth */; };
+		CE9B906A27D66A3A00728768 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = CE9B906927D66A3A00728768 /* FirebaseDatabase */; };
+		CE9B906C27D66A3A00728768 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = CE9B906B27D66A3A00728768 /* FirebaseFirestore */; };
+		CE9B906E27D66A3A00728768 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = CE9B906D27D66A3A00728768 /* FirebaseStorage */; };
+		CE9B907127D6868C00728768 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = CE9B907027D6868C00728768 /* Kingfisher */; };
+		CE9B907427D686B100728768 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B907327D686B100728768 /* SignInViewController.swift */; };
+		CE9B907627D686BC00728768 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B907527D686BC00728768 /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CE9B904227D602C600728768 /* Drunkard 1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Drunkard 1.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9B904527D602C600728768 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE9B904727D602C600728768 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE9B904927D602C600728768 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CE9B904C27D602C600728768 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE9B904F27D602C600728768 /* Drunkard_1_0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Drunkard_1_0.xcdatamodel; sourceTree = "<group>"; };
 		CE9B905127D602C800728768 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE9B905427D602C800728768 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE9B905627D602C800728768 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE9B906027D622FC00728768 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		CE9B906227D6681900728768 /* GoogleService-Info (1).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (1).plist"; sourceTree = "<group>"; };
+		CE9B907327D686B100728768 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		CE9B907527D686BC00728768 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +45,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE9B907127D6868C00728768 /* Kingfisher in Frameworks */,
+				CE9B906A27D66A3A00728768 /* FirebaseDatabase in Frameworks */,
+				CE9B906C27D66A3A00728768 /* FirebaseFirestore in Frameworks */,
+				CE9B906627D66A3A00728768 /* FirebaseAnalytics in Frameworks */,
+				CE9B906E27D66A3A00728768 /* FirebaseStorage in Frameworks */,
+				CE9B906827D66A3A00728768 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,16 +76,43 @@
 		CE9B904427D602C600728768 /* Drunkard 1.0 */ = {
 			isa = PBXGroup;
 			children = (
+				CE9B905C27D6227F00728768 /* ViewControllers */,
 				CE9B904527D602C600728768 /* AppDelegate.swift */,
 				CE9B904727D602C600728768 /* SceneDelegate.swift */,
-				CE9B904927D602C600728768 /* ViewController.swift */,
 				CE9B904B27D602C600728768 /* Main.storyboard */,
 				CE9B905127D602C800728768 /* Assets.xcassets */,
 				CE9B905327D602C800728768 /* LaunchScreen.storyboard */,
 				CE9B905627D602C800728768 /* Info.plist */,
 				CE9B904E27D602C600728768 /* Drunkard_1_0.xcdatamodeld */,
+				CE9B906227D6681900728768 /* GoogleService-Info (1).plist */,
 			);
 			path = "Drunkard 1.0";
+			sourceTree = "<group>";
+		};
+		CE9B905C27D6227F00728768 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE9B907227D6869B00728768 /* Authentification  */,
+				CE9B905D27D6228500728768 /* MapViewController */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CE9B905D27D6228500728768 /* MapViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE9B906027D622FC00728768 /* MapViewController.swift */,
+			);
+			path = MapViewController;
+			sourceTree = "<group>";
+		};
+		CE9B907227D6869B00728768 /* Authentification  */ = {
+			isa = PBXGroup;
+			children = (
+				CE9B907327D686B100728768 /* SignInViewController.swift */,
+				CE9B907527D686BC00728768 /* SignUpViewController.swift */,
+			);
+			path = "Authentification ";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +131,14 @@
 			dependencies = (
 			);
 			name = "Drunkard 1.0";
+			packageProductDependencies = (
+				CE9B906527D66A3A00728768 /* FirebaseAnalytics */,
+				CE9B906727D66A3A00728768 /* FirebaseAuth */,
+				CE9B906927D66A3A00728768 /* FirebaseDatabase */,
+				CE9B906B27D66A3A00728768 /* FirebaseFirestore */,
+				CE9B906D27D66A3A00728768 /* FirebaseStorage */,
+				CE9B907027D6868C00728768 /* Kingfisher */,
+			);
 			productName = "Drunkard 1.0";
 			productReference = CE9B904227D602C600728768 /* Drunkard 1.0.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +167,10 @@
 				Base,
 			);
 			mainGroup = CE9B903927D602C600728768;
+			packageReferences = (
+				CE9B906427D66A3A00728768 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				CE9B906F27D6868C00728768 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = CE9B904327D602C600728768 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -131,6 +188,7 @@
 				CE9B905527D602C800728768 /* LaunchScreen.storyboard in Resources */,
 				CE9B905227D602C800728768 /* Assets.xcassets in Resources */,
 				CE9B904D27D602C600728768 /* Main.storyboard in Resources */,
+				CE9B906327D6681900728768 /* GoogleService-Info (1).plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,10 +199,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE9B904A27D602C600728768 /* ViewController.swift in Sources */,
+				CE9B907627D686BC00728768 /* SignUpViewController.swift in Sources */,
 				CE9B904627D602C600728768 /* AppDelegate.swift in Sources */,
 				CE9B904827D602C600728768 /* SceneDelegate.swift in Sources */,
 				CE9B905027D602C600728768 /* Drunkard_1_0.xcdatamodeld in Sources */,
+				CE9B907427D686B100728768 /* SignInViewController.swift in Sources */,
+				CE9B906127D622FC00728768 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +422,58 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CE9B906427D66A3A00728768 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+		CE9B906F27D6868C00728768 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CE9B906527D66A3A00728768 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE9B906427D66A3A00728768 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		CE9B906727D66A3A00728768 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE9B906427D66A3A00728768 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		CE9B906927D66A3A00728768 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE9B906427D66A3A00728768 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		CE9B906B27D66A3A00728768 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE9B906427D66A3A00728768 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		CE9B906D27D66A3A00728768 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE9B906427D66A3A00728768 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		CE9B907027D6868C00728768 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE9B906F27D6868C00728768 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		CE9B904E27D602C600728768 /* Drunkard_1_0.xcdatamodeld */ = {
