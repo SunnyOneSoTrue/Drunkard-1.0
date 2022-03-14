@@ -14,7 +14,6 @@
 		CE9B905227D602C800728768 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE9B905127D602C800728768 /* Assets.xcassets */; };
 		CE9B905527D602C800728768 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9B905327D602C800728768 /* LaunchScreen.storyboard */; };
 		CE9B906127D622FC00728768 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B906027D622FC00728768 /* MapViewController.swift */; };
-		CE9B906327D6681900728768 /* GoogleService-Info (1).plist in Resources */ = {isa = PBXBuildFile; fileRef = CE9B906227D6681900728768 /* GoogleService-Info (1).plist */; };
 		CE9B906627D66A3A00728768 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = CE9B906527D66A3A00728768 /* FirebaseAnalytics */; };
 		CE9B906827D66A3A00728768 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CE9B906727D66A3A00728768 /* FirebaseAuth */; };
 		CE9B906A27D66A3A00728768 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = CE9B906927D66A3A00728768 /* FirebaseDatabase */; };
@@ -23,6 +22,7 @@
 		CE9B907127D6868C00728768 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = CE9B907027D6868C00728768 /* Kingfisher */; };
 		CE9B907427D686B100728768 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B907327D686B100728768 /* SignInViewController.swift */; };
 		CE9B907627D686BC00728768 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B907527D686BC00728768 /* SignUpViewController.swift */; };
+		CEBF2B8B27DF44D0007E0CE1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEBF2B8A27DF44D0007E0CE1 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,9 +35,9 @@
 		CE9B905427D602C800728768 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE9B905627D602C800728768 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE9B906027D622FC00728768 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		CE9B906227D6681900728768 /* GoogleService-Info (1).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (1).plist"; sourceTree = "<group>"; };
 		CE9B907327D686B100728768 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		CE9B907527D686BC00728768 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		CEBF2B8A27DF44D0007E0CE1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +83,8 @@
 				CE9B905127D602C800728768 /* Assets.xcassets */,
 				CE9B905327D602C800728768 /* LaunchScreen.storyboard */,
 				CE9B905627D602C800728768 /* Info.plist */,
+				CEBF2B8A27DF44D0007E0CE1 /* GoogleService-Info.plist */,
 				CE9B904E27D602C600728768 /* Drunkard_1_0.xcdatamodeld */,
-				CE9B906227D6681900728768 /* GoogleService-Info (1).plist */,
 			);
 			path = "Drunkard 1.0";
 			sourceTree = "<group>";
@@ -186,9 +186,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE9B905527D602C800728768 /* LaunchScreen.storyboard in Resources */,
+				CEBF2B8B27DF44D0007E0CE1 /* GoogleService-Info.plist in Resources */,
 				CE9B905227D602C800728768 /* Assets.xcassets in Resources */,
 				CE9B904D27D602C600728768 /* Main.storyboard in Resources */,
-				CE9B906327D6681900728768 /* GoogleService-Info (1).plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
