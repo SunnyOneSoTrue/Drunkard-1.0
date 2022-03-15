@@ -13,17 +13,52 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var emailField: UITextField?
     @IBOutlet weak var passwordField: UITextField?
     @IBOutlet weak var warningLabel: UILabel!
+    @IBOutlet weak var rememberMeButton: UIButton!
+    
+    var rememberMe = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        
+        if("signed user exists" == ""){ // temporary conditional TODO: write logic of remembering a signed in user
+            changeRootAndMoveToViewController()
+        }
+        
         warningLabel.isHidden = true
+        
+        rememberMeButton.setImage(UIImage(systemName: "square.dashed"), for: .normal)
         // Do any additional setup after loading the view.
     }
     
     @IBAction func onSignIn(_ sender: UIButton) {
         
+        self.emailField?.layer.borderWidth = 0 // used to reset the email and password fields so it can later be detected where the problem is
+        self.passwordField?.layer.borderWidth = 0
+        
+        warningLabel.isHidden = true
         guard let email = emailField?.text! else {return}
         guard let password = passwordField?.text! else {return}
+        
+        
+        switch (email, password) { // used for detecting and highliting where the problem is: the email, the password or both.
+        case let (email, password) where password == "" && email == "":
+            self.emailField?.layer.borderWidth = 3
+            self.passwordField?.layer.borderWidth = 3
+            self.passwordField?.layer.borderColor = UIColor(red: 1.00, green: 0.00, blue: 0.00, alpha: 1.00).cgColor
+            self.emailField?.layer.borderColor = UIColor(red: 1.00, green: 0.00, blue: 0.00, alpha: 1.00).cgColor
+            
+        case let (email, password) where email == "" && password != "":
+            self.emailField?.layer.borderWidth = 3
+            self.emailField?.layer.borderColor = UIColor(red: 1.00, green: 0.00, blue: 0.00, alpha: 1.00).cgColor
+
+        case let (email, password) where password == "" && email != "":
+            self.passwordField?.layer.borderWidth = 3
+            self.passwordField?.layer.borderColor = UIColor(red: 1.00, green: 0.00, blue: 0.00, alpha: 1.00).cgColor
+
+        default:
+            print("both email and password are present")
+        }
         
         
         FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password, completion: {[weak self] result, error in
@@ -33,27 +68,41 @@ class SignInViewController: UIViewController {
             guard error == nil else {
                 strongSelf.warningLabel.text = "\(error!.localizedDescription)"
                 strongSelf.warningLabel.isHidden = false
-                
-                if let errCode = AuthErrorCode(rawValue: error!._code) {
-
-                    switch errCode {
-                    case .invalidEmail, .missingEmail:
-                        self?.emailField?.layer.borderColor = CGColor.init(red: 1, green: 0, blue: 0, alpha: 1)
-                    case .wrongPassword:
-                        self?.passwordField?.layer.borderColor = CGColor.init(red: 1, green: 0, blue: 0, alpha: 1)
-                    default:
-                        print("Create User Error: \(error!)")
-                    }
-                }
-                
-                
                 return
             }
+            
+            //TODO: remember signed in user
+            
             print("you have signed in")
-            //TODO: Send to app
+            
+            self?.changeRootAndMoveToViewController()
         })
     }
     
+    func changeRootAndMoveToViewController() {
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "TabBarController") // changes the root viewcontroller and moves to it
+        self.view.window?.rootViewController = vc
+        self.view.window?.makeKeyAndVisible()
+    }
+    
+    
+    @IBAction func onRememberMe(_ sender: UIButton) {
+        rememberMe.toggle()
+    
+        switch rememberMe {
+        case true:
+            sender.setImage(UIImage(systemName:  "heart.square"), for: .normal)
+
+        case false:
+            sender.setImage(UIImage(systemName: "square.dashed"), for: .normal)
+
+        default:
+            return
+        }
+    }
+    
     @IBAction func onSignUp(_ sender: UIButton) {
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SignUpViewController") as? SignUpViewController
+        self.navigationController?.pushViewController(vc!, animated: true)
     }
 }
