@@ -8,6 +8,7 @@
 import UIKit
 import MapKit
 import CoreLocation
+import FirebaseAuth
 
 class MapViewController: UIViewController{
     
@@ -18,10 +19,20 @@ class MapViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        validateAuth()
+        
         map.delegate = self
         
         checkLocationServices()
         
+    }
+    
+    private func validateAuth(){
+        if FirebaseAuth.Auth.auth().currentUser == nil {
+            let vc = (UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SignInViewController") as? SignInViewController)!
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: true)
+        }
     }
     
     @IBAction func onAdd(_ sender: UIButton) {

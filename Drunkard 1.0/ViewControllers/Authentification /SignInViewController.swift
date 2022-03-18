@@ -74,21 +74,17 @@ class SignInViewController: UIViewController {
             //TODO: remember signed in user
             
             print("you have signed in")
-            
+//            strongSelf.navigationController?.dismiss(animated: true)
             self?.changeRootAndMoveToViewController()
         })
     }
     
-    func changeRootAndMoveToViewController() {
-        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "TabBarController") // changes the root viewcontroller and moves to it
-        self.view.window?.rootViewController = vc
-        self.view.window?.makeKeyAndVisible()
-    }
+    
     
     
     @IBAction func onRememberMe(_ sender: UIButton) {
         rememberMe.toggle()
-    
+    //TODO: add remember me function
         switch rememberMe {
         case true:
             sender.setImage(UIImage(systemName:  "heart.square"), for: .normal)
@@ -102,7 +98,12 @@ class SignInViewController: UIViewController {
     }
     
     @IBAction func onSignUp(_ sender: UIButton) {
-        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SignUpViewController") as? SignUpViewController
-        self.navigationController?.pushViewController(vc!, animated: true)
+        let vc = (UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SignUpViewController") as? SignUpViewController)!
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
+    }
+    
+    func changeRootAndMoveToViewController() {
+        self.dismiss(animated: true)
     }
 }
