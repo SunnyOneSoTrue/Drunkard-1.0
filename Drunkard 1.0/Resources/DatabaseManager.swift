@@ -22,9 +22,10 @@ extension DatabaseManager {
     ///inserts the user into the database with the provided users information
     public func insertUser(with user: user){
         var usableEmail = ""
+        
         for letter in user.email {
-            if letter == "." {
-                break
+            if letter == "."{
+                usableEmail += "^"
             }
             else {
                 usableEmail += String(letter)

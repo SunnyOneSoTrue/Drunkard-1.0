@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE7B7A3027E5CD5A007C4F22 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B7A2F27E5CD5A007C4F22 /* ProfileViewController.swift */; };
 		CE9B904627D602C600728768 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B904527D602C600728768 /* AppDelegate.swift */; };
 		CE9B904827D602C600728768 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B904727D602C600728768 /* SceneDelegate.swift */; };
 		CE9B904D27D602C600728768 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9B904B27D602C600728768 /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE7B7A2F27E5CD5A007C4F22 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		CE9B904227D602C600728768 /* Drunkard 1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Drunkard 1.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9B904527D602C600728768 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE9B904727D602C600728768 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE7B7A2E27E5CD4B007C4F22 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				CE7B7A2F27E5CD5A007C4F22 /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		CE9B903927D602C600728768 = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +110,7 @@
 		CE9B905C27D6227F00728768 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				CE7B7A2E27E5CD4B007C4F22 /* Profile */,
 				CE9B907227D6869B00728768 /* Authentification  */,
 				CEF3080E27E4A3440074999D /* Messaging */,
 				CE9B905D27D6228500728768 /* MapViewController */,
@@ -244,6 +255,7 @@
 				CEF3081227E4A3B40074999D /* ChatViewController.swift in Sources */,
 				CEF3081027E4A37F0074999D /* ConversationsViewController.swift in Sources */,
 				CE9B904827D602C600728768 /* SceneDelegate.swift in Sources */,
+				CE7B7A3027E5CD5A007C4F22 /* ProfileViewController.swift in Sources */,
 				CE9B905027D602C600728768 /* Drunkard_1_0.xcdatamodeld in Sources */,
 				CE9B907427D686B100728768 /* SignInViewController.swift in Sources */,
 				CEF3081627E4A3F30074999D /* VideoPlayerViewController.swift in Sources */,

@@ -21,14 +21,18 @@ class SignInViewController: UIViewController {
         super.viewDidLoad()
 
         
-        if("signed user exists" == ""){ // temporary conditional TODO: write logic of remembering a signed in user
-            changeRootAndMoveToViewController()
-        }
+       
         
         warningLabel.isHidden = true
         
         rememberMeButton.setImage(UIImage(systemName: "square.dashed"), for: .normal)
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if(FirebaseAuth.Auth.auth().currentUser != nil){ // temporary conditional TODO: write logic of remembering a signed in user
+            changeRootAndMoveToViewController()
+        }
     }
     
     @IBAction func onSignIn(_ sender: UIButton) {
