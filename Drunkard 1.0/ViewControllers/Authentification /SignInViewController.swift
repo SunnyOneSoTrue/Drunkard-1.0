@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseAuth
+import JGProgressHUD
 
 class SignInViewController: UIViewController {
 
@@ -14,6 +15,8 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField?
     @IBOutlet weak var warningLabel: UILabel!
     @IBOutlet weak var rememberMeButton: UIButton!
+    
+    private let spinner  = JGProgressHUD(style: .dark)
     
     var rememberMe = false
     
@@ -64,10 +67,15 @@ class SignInViewController: UIViewController {
             print("both email and password are present")
         }
         
+        spinner.show(in: view)
         
         FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password, completion: {[weak self] result, error in
             
             guard let strongSelf = self else { return }
+            
+            DispatchQueue.main.async {
+                strongSelf.spinner.dismiss(animated: true)
+            }
             
             guard error == nil else {
                 strongSelf.warningLabel.text = "\(error!.localizedDescription)"

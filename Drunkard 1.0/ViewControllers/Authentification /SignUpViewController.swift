@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseAuth
 import FirebaseDatabase
+import JGProgressHUD
 
 class SignUpViewController: UIViewController {
     
@@ -17,6 +18,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var firstNameField: UITextField!
     @IBOutlet weak var lastnameField: UITextField!
     
+    private let spinner  = JGProgressHUD(style: .dark)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,9 +44,15 @@ class SignUpViewController: UIViewController {
         checkFieldValidities(field: firstNameField)
         checkFieldValidities(field: lastnameField)
         
+        spinner.show(in: view)
+        
         FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password, completion: {[weak self] result, error in
             
             guard let strongSelf = self else { return }
+            
+            DispatchQueue.main.async {
+                strongSelf.spinner.dismiss(animated: true)
+            }
             
             guard error == nil else {
                 strongSelf.errorLabel.text = "\(error!.localizedDescription)"

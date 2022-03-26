@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE20339F27EF356D00D6964F /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = CE20339E27EF356D00D6964F /* MessageKit */; };
+		CE2033A227EF367500D6964F /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = CE2033A127EF367500D6964F /* JGProgressHUD */; };
+		CE2033A527EF37FB00D6964F /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = CE2033A427EF37FB00D6964F /* Realm */; };
+		CE2033A727EF37FB00D6964F /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CE2033A627EF37FB00D6964F /* RealmSwift */; };
+		CE2033AA27EF390F00D6964F /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = CE2033A927EF390F00D6964F /* SDWebImage */; };
+		CE2033AC27EF390F00D6964F /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CE2033AB27EF390F00D6964F /* SDWebImageMapKit */; };
+		CE2033AE27EF49E500D6964F /* NewConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2033AD27EF49E500D6964F /* NewConversationViewController.swift */; };
 		CE7B7A3027E5CD5A007C4F22 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B7A2F27E5CD5A007C4F22 /* ProfileViewController.swift */; };
 		CE9B904627D602C600728768 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B904527D602C600728768 /* AppDelegate.swift */; };
 		CE9B904827D602C600728768 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B904727D602C600728768 /* SceneDelegate.swift */; };
@@ -32,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE2033AD27EF49E500D6964F /* NewConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationViewController.swift; sourceTree = "<group>"; };
 		CE7B7A2F27E5CD5A007C4F22 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		CE9B904227D602C600728768 /* Drunkard 1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Drunkard 1.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9B904527D602C600728768 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,8 +68,14 @@
 				CE9B907127D6868C00728768 /* Kingfisher in Frameworks */,
 				CE9B906A27D66A3A00728768 /* FirebaseDatabase in Frameworks */,
 				CE9B906C27D66A3A00728768 /* FirebaseFirestore in Frameworks */,
+				CE20339F27EF356D00D6964F /* MessageKit in Frameworks */,
+				CE2033A227EF367500D6964F /* JGProgressHUD in Frameworks */,
 				CE9B906627D66A3A00728768 /* FirebaseAnalytics in Frameworks */,
+				CE2033A527EF37FB00D6964F /* Realm in Frameworks */,
 				CE9B906E27D66A3A00728768 /* FirebaseStorage in Frameworks */,
+				CE2033AA27EF390F00D6964F /* SDWebImage in Frameworks */,
+				CE2033A727EF37FB00D6964F /* RealmSwift in Frameworks */,
+				CE2033AC27EF390F00D6964F /* SDWebImageMapKit in Frameworks */,
 				CE9B906827D66A3A00728768 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -161,6 +175,7 @@
 				CEF3081127E4A3B40074999D /* ChatViewController.swift */,
 				CEF3081327E4A3DD0074999D /* PhotoViewerViewController.swift */,
 				CEF3081527E4A3F30074999D /* VideoPlayerViewController.swift */,
+				CE2033AD27EF49E500D6964F /* NewConversationViewController.swift */,
 			);
 			path = Messaging;
 			sourceTree = "<group>";
@@ -188,6 +203,12 @@
 				CE9B906B27D66A3A00728768 /* FirebaseFirestore */,
 				CE9B906D27D66A3A00728768 /* FirebaseStorage */,
 				CE9B907027D6868C00728768 /* Kingfisher */,
+				CE20339E27EF356D00D6964F /* MessageKit */,
+				CE2033A127EF367500D6964F /* JGProgressHUD */,
+				CE2033A427EF37FB00D6964F /* Realm */,
+				CE2033A627EF37FB00D6964F /* RealmSwift */,
+				CE2033A927EF390F00D6964F /* SDWebImage */,
+				CE2033AB27EF390F00D6964F /* SDWebImageMapKit */,
 			);
 			productName = "Drunkard 1.0";
 			productReference = CE9B904227D602C600728768 /* Drunkard 1.0.app */;
@@ -220,6 +241,10 @@
 			packageReferences = (
 				CE9B906427D66A3A00728768 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				CE9B906F27D6868C00728768 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				CE20339D27EF356C00D6964F /* XCRemoteSwiftPackageReference "MessageKit" */,
+				CE2033A027EF367400D6964F /* XCRemoteSwiftPackageReference "JGProgressHUD" */,
+				CE2033A327EF37FB00D6964F /* XCRemoteSwiftPackageReference "realm-swift" */,
+				CE2033A827EF390E00D6964F /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = CE9B904327D602C600728768 /* Products */;
 			projectDirPath = "";
@@ -252,6 +277,7 @@
 				CE9B907627D686BC00728768 /* SignUpViewController.swift in Sources */,
 				CEF3081827E4BF920074999D /* DatabaseManager.swift in Sources */,
 				CE9B904627D602C600728768 /* AppDelegate.swift in Sources */,
+				CE2033AE27EF49E500D6964F /* NewConversationViewController.swift in Sources */,
 				CEF3081227E4A3B40074999D /* ChatViewController.swift in Sources */,
 				CEF3081027E4A37F0074999D /* ConversationsViewController.swift in Sources */,
 				CE9B904827D602C600728768 /* SceneDelegate.swift in Sources */,
@@ -486,6 +512,38 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		CE20339D27EF356C00D6964F /* XCRemoteSwiftPackageReference "MessageKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MessageKit/MessageKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		CE2033A027EF367400D6964F /* XCRemoteSwiftPackageReference "JGProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JonasGessner/JGProgressHUD";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		CE2033A327EF37FB00D6964F /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		CE2033A827EF390E00D6964F /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		CE9B906427D66A3A00728768 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -505,6 +563,36 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		CE20339E27EF356D00D6964F /* MessageKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE20339D27EF356C00D6964F /* XCRemoteSwiftPackageReference "MessageKit" */;
+			productName = MessageKit;
+		};
+		CE2033A127EF367500D6964F /* JGProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE2033A027EF367400D6964F /* XCRemoteSwiftPackageReference "JGProgressHUD" */;
+			productName = JGProgressHUD;
+		};
+		CE2033A427EF37FB00D6964F /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE2033A327EF37FB00D6964F /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		CE2033A627EF37FB00D6964F /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE2033A327EF37FB00D6964F /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		CE2033A927EF390F00D6964F /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE2033A827EF390E00D6964F /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		CE2033AB27EF390F00D6964F /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE2033A827EF390E00D6964F /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
 		CE9B906527D66A3A00728768 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CE9B906427D66A3A00728768 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

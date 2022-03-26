@@ -79,14 +79,51 @@
                     <view key="view" contentMode="scaleToFill" id="xu4-75-R2a">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="x0I-Pg-PXM">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="MHL-PN-QFp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="x0I-Pg-PXM" firstAttribute="top" secondItem="MHL-PN-QFp" secondAttribute="top" id="5aR-Iu-uOo"/>
+                            <constraint firstItem="MHL-PN-QFp" firstAttribute="bottom" secondItem="x0I-Pg-PXM" secondAttribute="bottom" id="Lk6-U1-5Ci"/>
+                            <constraint firstItem="x0I-Pg-PXM" firstAttribute="leading" secondItem="MHL-PN-QFp" secondAttribute="leading" id="PIG-HB-TDk"/>
+                            <constraint firstItem="MHL-PN-QFp" firstAttribute="trailing" secondItem="x0I-Pg-PXM" secondAttribute="trailing" id="bOS-48-uH1"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="HcE-VW-P7y"/>
+                    <navigationItem key="navigationItem" id="HcE-VW-P7y">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="square.and.pencil" catalog="system" id="39h-Ed-am1">
+                            <connections>
+                                <action selector="onCompose:" destination="qiH-XS-yLi" id="soj-hx-Nx0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="x0I-Pg-PXM" id="db1-1K-O1Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6aT-qB-8Ao" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="877" y="954"/>
+            <point key="canvasLocation" x="876.81159420289862" y="953.57142857142856"/>
+        </scene>
+        <!--New Conversation View Controller-->
+        <scene sceneID="8Ou-ri-J5D">
+            <objects>
+                <viewController storyboardIdentifier="NewConversationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sNv-fL-eWU" customClass="NewConversationViewController" customModule="Drunkard_1_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eAY-Z7-r01">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="lcn-By-ilY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="JN1-kI-Vpg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Riu-y0-ovh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="877" y="2328"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="fIR-rP-Sty">
@@ -382,12 +419,31 @@
             </objects>
             <point key="canvasLocation" x="-48" y="-1377"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Az7-UP-dUD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="P3e-Q2-QF2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5pz-2f-uI2">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sNv-fL-eWU" kind="relationship" relationship="rootViewController" id="h9W-zx-30J"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JDr-WP-sIc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="876.81159420289862" y="1647.9910714285713"/>
+        </scene>
     </scenes>
     <resources>
         <image name="map.fill" catalog="system" width="128" height="110"/>
         <image name="message.fill" catalog="system" width="128" height="113"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="rectangle.portrait.and.arrow.right" catalog="system" width="128" height="108"/>
+        <image name="square.and.pencil" catalog="system" width="128" height="115"/>
         <image name="trash.square" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
