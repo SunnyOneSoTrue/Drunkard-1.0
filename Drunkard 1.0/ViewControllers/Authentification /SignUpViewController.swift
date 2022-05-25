@@ -17,6 +17,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var firstNameField: UITextField!
     @IBOutlet weak var lastnameField: UITextField!
+    @IBOutlet weak var phoneNumberField: UITextField!
     
     private let spinner  = JGProgressHUD(style: .dark)
 
@@ -43,6 +44,7 @@ class SignUpViewController: UIViewController {
         checkFieldValidities(field: passwordField)
         checkFieldValidities(field: firstNameField)
         checkFieldValidities(field: lastnameField)
+        checkFieldValidities(field: phoneNumberField)
         
         spinner.show(in: view)
         
@@ -61,7 +63,7 @@ class SignUpViewController: UIViewController {
             }
             
             print("you have registered")
-            DatabaseManager.shared.insertUser(with: user(firstName: self!.firstNameField.text!, lastName: self!.lastnameField.text!, email: email))
+            DatabaseManager.shared.insertUser(with: user(firstName: self!.firstNameField.text!, lastName: self!.lastnameField.text!, email: email, phoneNumber: self!.phoneNumberField.text!))
             self?.dismiss(animated: true)
             
         })

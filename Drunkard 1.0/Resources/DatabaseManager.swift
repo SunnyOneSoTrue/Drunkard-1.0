@@ -35,6 +35,7 @@ extension DatabaseManager {
         database.child(usableEmail).setValue([
             "first_name": user.firstName,
             "last_name": user.lastName,
+            "phone_number": user.phoneNumber
 //            "profilePictureURL":user.profilePictureURL
         ])
     }
@@ -45,5 +46,6 @@ struct user {
     let firstName: String
     let lastName:String
     let email:String
+    let phoneNumber:String
 //    let profilePictureURL:String
 }

@@ -23,9 +23,6 @@ class SignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-       
-        
         warningLabel.isHidden = true
         
         rememberMeButton.setImage(UIImage(systemName: "square.dashed"), for: .normal)
