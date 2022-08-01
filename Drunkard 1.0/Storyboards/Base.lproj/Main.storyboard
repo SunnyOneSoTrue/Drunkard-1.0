@@ -132,8 +132,65 @@
                     <view key="view" contentMode="scaleToFill" id="0Nn-BX-dm6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PN8-vw-pRi">
+                                <rect key="frame" x="0.0" y="88" width="414" height="215"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="215" id="PGl-5D-fbI"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pb9-gt-JYj">
+                                <rect key="frame" x="107" y="205" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="T0m-Kc-zSZ"/>
+                                </constraints>
+                            </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Bew-c7-IG4">
+                                <rect key="frame" x="20" y="413" width="374" height="32"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <connections>
+                                    <action selector="onSegmentChange:" destination="cQA-0E-ua7" eventType="valueChanged" id="JgA-xR-xNZ"/>
+                                </connections>
+                            </segmentedControl>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jc2-4D-s2m">
+                                <rect key="frame" x="0.0" y="452" width="414" height="361"/>
+                                <connections>
+                                    <segue destination="LYH-hG-NiC" kind="embed" id="h5b-3P-f16"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3hQ-IX-bzu">
+                                <rect key="frame" x="0.0" y="452" width="414" height="361"/>
+                                <connections>
+                                    <segue destination="Bqn-rM-yrA" kind="embed" id="yfU-dd-VQr"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="QJ4-Is-JsM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3hQ-IX-bzu" firstAttribute="leading" secondItem="QJ4-Is-JsM" secondAttribute="leading" id="32x-FZ-EsZ"/>
+                            <constraint firstItem="3hQ-IX-bzu" firstAttribute="top" secondItem="Bew-c7-IG4" secondAttribute="bottom" constant="8" id="8zt-fX-vwy"/>
+                            <constraint firstItem="3hQ-IX-bzu" firstAttribute="trailing" secondItem="QJ4-Is-JsM" secondAttribute="trailing" id="BRe-Kh-TEm"/>
+                            <constraint firstItem="QJ4-Is-JsM" firstAttribute="trailing" secondItem="Bew-c7-IG4" secondAttribute="trailing" constant="20" id="JiF-mB-k1C"/>
+                            <constraint firstItem="jc2-4D-s2m" firstAttribute="trailing" secondItem="QJ4-Is-JsM" secondAttribute="trailing" id="MoS-qM-uHt"/>
+                            <constraint firstItem="QJ4-Is-JsM" firstAttribute="trailing" secondItem="Pb9-gt-JYj" secondAttribute="trailing" constant="107" id="ND6-Co-0hG"/>
+                            <constraint firstItem="Bew-c7-IG4" firstAttribute="leading" secondItem="QJ4-Is-JsM" secondAttribute="leading" constant="20" id="PIw-4H-phe"/>
+                            <constraint firstItem="3hQ-IX-bzu" firstAttribute="bottom" secondItem="QJ4-Is-JsM" secondAttribute="bottom" id="V3Z-E1-uOe"/>
+                            <constraint firstItem="jc2-4D-s2m" firstAttribute="leading" secondItem="QJ4-Is-JsM" secondAttribute="leading" id="VDi-NY-45u"/>
+                            <constraint firstItem="jc2-4D-s2m" firstAttribute="trailing" secondItem="QJ4-Is-JsM" secondAttribute="trailing" id="dLs-9J-VuJ"/>
+                            <constraint firstItem="PN8-vw-pRi" firstAttribute="top" secondItem="QJ4-Is-JsM" secondAttribute="top" id="fmU-tA-qSS"/>
+                            <constraint firstItem="Pb9-gt-JYj" firstAttribute="leading" secondItem="QJ4-Is-JsM" secondAttribute="leading" constant="107" id="gtU-VI-ZgN"/>
+                            <constraint firstItem="Pb9-gt-JYj" firstAttribute="top" secondItem="QJ4-Is-JsM" secondAttribute="top" constant="117" id="jeQ-bh-TiT"/>
+                            <constraint firstItem="jc2-4D-s2m" firstAttribute="top" secondItem="Bew-c7-IG4" secondAttribute="bottom" constant="8" id="qiR-a2-eXM"/>
+                            <constraint firstItem="QJ4-Is-JsM" firstAttribute="bottom" secondItem="jc2-4D-s2m" secondAttribute="bottom" id="sDr-L1-vKY"/>
+                            <constraint firstItem="PN8-vw-pRi" firstAttribute="trailing" secondItem="QJ4-Is-JsM" secondAttribute="trailing" id="snp-8Y-K5R"/>
+                            <constraint firstItem="jc2-4D-s2m" firstAttribute="leading" secondItem="QJ4-Is-JsM" secondAttribute="leading" id="tJ2-7t-caV"/>
+                            <constraint firstItem="Bew-c7-IG4" firstAttribute="top" secondItem="PN8-vw-pRi" secondAttribute="bottom" constant="110" id="tqg-5r-Zec"/>
+                            <constraint firstItem="PN8-vw-pRi" firstAttribute="leading" secondItem="QJ4-Is-JsM" secondAttribute="leading" id="zLX-xm-pQS"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4Sv-uh-ru3">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="rectangle.portrait.and.arrow.right" catalog="system" id="XGX-gd-eyh">
@@ -142,10 +199,17 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="PN8-vw-pRi" id="Zd9-nk-0zN"/>
+                        <outlet property="infoContainerView" destination="3hQ-IX-bzu" id="LMU-zQ-dR4"/>
+                        <outlet property="profilePictureView" destination="Pb9-gt-JYj" id="ybc-Fw-kSv"/>
+                        <outlet property="publicationsContainerView" destination="jc2-4D-s2m" id="OGk-gC-tq1"/>
+                        <outlet property="segmentedControl" destination="Bew-c7-IG4" id="i3k-vZ-EZi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rBP-9L-j6b" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1819" y="954"/>
+            <point key="canvasLocation" x="1818.840579710145" y="953.57142857142856"/>
         </scene>
         <!--Map-->
         <scene sceneID="AC3-Qi-fu9">
@@ -445,6 +509,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JDr-WP-sIc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="876.81159420289862" y="1647.9910714285713"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="lUl-TB-hhT">
+            <objects>
+                <viewController id="LYH-hG-NiC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UDA-iy-mBU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="361"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ity-dX-2VS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1600" y="1542"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="pE3-DB-Hgw">
+            <objects>
+                <viewController id="Bqn-rM-yrA" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VWY-zi-nQp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="361"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jL8-ri-vSo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2272" y="1542"/>
         </scene>
     </scenes>
     <resources>

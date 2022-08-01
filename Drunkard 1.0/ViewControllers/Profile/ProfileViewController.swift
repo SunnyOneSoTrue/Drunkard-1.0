@@ -9,12 +9,31 @@ import UIKit
 import FirebaseAuth
 
 class ProfileViewController: UIViewController {
-
+    @IBOutlet weak var backgroundImageView: UIImageView!
+    @IBOutlet weak var profilePictureView: UIImageView!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var publicationsContainerView: UIView!
+    @IBOutlet weak var infoContainerView: UIView!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        infoContainerView.alpha = 0
     }
+    
+    @IBAction func onSegmentChange(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            publicationsContainerView.alpha = 1
+            infoContainerView.alpha = 0
+        }
+        else {
+            publicationsContainerView.alpha = 0
+            infoContainerView.alpha = 1
+        }
+    }
+    
     
     @IBAction func onLogOut(_ sender: UIBarButtonItem) {
         let alert = UIAlertController(title: "Sign Out?", message: "are you sure you want to sign out?", preferredStyle: .actionSheet)
