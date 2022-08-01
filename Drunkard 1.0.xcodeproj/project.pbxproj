@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE1AE5AB28983AFC00B93E9A /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1AE5AA28983AFC00B93E9A /* StorageManager.swift */; };
 		CE20339F27EF356D00D6964F /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = CE20339E27EF356D00D6964F /* MessageKit */; };
 		CE2033A227EF367500D6964F /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = CE2033A127EF367500D6964F /* JGProgressHUD */; };
 		CE2033A527EF37FB00D6964F /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = CE2033A427EF37FB00D6964F /* Realm */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE1AE5AA28983AFC00B93E9A /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		CE2033AD27EF49E500D6964F /* NewConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationViewController.swift; sourceTree = "<group>"; };
 		CE7B7A2F27E5CD5A007C4F22 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		CE9B904227D602C600728768 /* Drunkard 1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Drunkard 1.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,6 +157,7 @@
 				CE9B904527D602C600728768 /* AppDelegate.swift */,
 				CE9B904727D602C600728768 /* SceneDelegate.swift */,
 				CEF3081727E4BF920074999D /* DatabaseManager.swift */,
+				CE1AE5AA28983AFC00B93E9A /* StorageManager.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				CE9B907627D686BC00728768 /* SignUpViewController.swift in Sources */,
 				CEF3081827E4BF920074999D /* DatabaseManager.swift in Sources */,
 				CE9B904627D602C600728768 /* AppDelegate.swift in Sources */,
+				CE1AE5AB28983AFC00B93E9A /* StorageManager.swift in Sources */,
 				CE2033AE27EF49E500D6964F /* NewConversationViewController.swift in Sources */,
 				CEF3081227E4A3B40074999D /* ChatViewController.swift in Sources */,
 				CEF3081027E4A37F0074999D /* ConversationsViewController.swift in Sources */,
