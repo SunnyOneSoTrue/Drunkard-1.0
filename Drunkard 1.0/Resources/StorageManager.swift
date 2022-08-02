@@ -12,6 +12,10 @@ final class storageManager {
     static let shared = storageManager()
     private let storage = Storage.storage().reference()
     
+    /*
+     /images/email@gmail.com-profile-pircute.png
+     */
+    
     public typealias UploadPictureCompletion = (Result<String,Error>) -> Void
     
     public func uploadProfilePicture(with Data: Data, filename: String, completion: @escaping UploadPictureCompletion){

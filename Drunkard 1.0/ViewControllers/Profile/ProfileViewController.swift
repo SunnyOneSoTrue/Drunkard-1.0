@@ -14,6 +14,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var publicationsContainerView: UIView!
     @IBOutlet weak var infoContainerView: UIView!
+    @IBOutlet weak var nameLabel: UILabel!
     
     
     
@@ -21,6 +22,7 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         
         infoContainerView.alpha = 0
+        profilePictureView.layer.cornerRadius = profilePictureView.frame.width/2
     }
     
     @IBAction func onSegmentChange(_ sender: UISegmentedControl) {
@@ -34,6 +36,13 @@ class ProfileViewController: UIViewController {
         }
     }
     
+    @IBAction func onTapProfilePicture(_ sender: Any) {
+        act(on: profilePictureView)
+    }
+    
+    @IBAction func onTapBackgroundPicture(_ sender: Any) {
+        act(on: backgroundImageView)
+    }
     
     @IBAction func onLogOut(_ sender: UIBarButtonItem) {
         let alert = UIAlertController(title: "Sign Out?", message: "are you sure you want to sign out?", preferredStyle: .actionSheet)
@@ -58,6 +67,22 @@ class ProfileViewController: UIViewController {
         
         present(alert, animated: true)
         
+        
+    }
+    
+    
+    private func act(on imageView: UIImageView) {
+        let actionSheet = UIAlertController(title: "Please Select your action", message: "", preferredStyle: .actionSheet)
+        
+        actionSheet.addAction(UIAlertAction(title: "View", style: .default, handler: { _ in
+            
+        }))
+        
+        actionSheet.addAction(UIAlertAction(title: "Replace", style: .default, handler: { _ in
+            
+        }))
+        
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         
     }
 }

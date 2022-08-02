@@ -62,8 +62,30 @@ class SignUpViewController: UIViewController {
                 return
             }
             
+            let chatUser = user(firstName: self!.firstNameField.text!,
+                                lastName: self!.lastnameField.text!,
+                                phoneNumber: self!.phoneNumberField.text!,
+                                email: email)
+            
             print("you have registered")
-            DatabaseManager.shared.insertUser(with: user(firstName: self!.firstNameField.text!, lastName: self!.lastnameField.text!, email: email, phoneNumber: self!.phoneNumberField.text!))
+            DatabaseManager.shared.insertUser(with: chatUser, completion: {success in
+                if success {
+                    //upload image
+                    guard let image = UIImage(named: "blank_profile_pic"), let data = image.pngData() else {return}
+                    
+                    let filename = chatUser.profilePictureFileName
+                    
+                    storageManager.shared.uploadProfilePicture(with: data, filename: filename) { result in
+                        switch result {
+                        case .success(let downloadURL):
+                            UserDefaults.standard.setValue(downloadURL, forKey: "profile_picture_url")
+                            print(downloadURL)
+                        case .failure(let error):
+                            print("storage manager error: \(error)")
+                        }
+                    }
+                }
+            })
             self?.dismiss(animated: true)
             
         })

@@ -20,24 +20,21 @@ final class DatabaseManager {
 //MARK: ACCOUNT MANAGEMENT
 extension DatabaseManager {
     ///inserts the user into the database with the provided users information
-    public func insertUser(with user: user){
-        var usableEmail = ""
+    public func insertUser(with user: user, completion: @escaping (Bool) -> Void){
         
-        for letter in user.email {
-            if letter == "."{
-                usableEmail += "^"
-            }
-            else {
-                usableEmail += String(letter)
-            }
-        }
-        
-        database.child(usableEmail).setValue([
+        database.child(user.safeEmail).setValue([
             "first_name": user.firstName,
             "last_name": user.lastName,
             "phone_number": user.phoneNumber
 //            "profilePictureURL":user.profilePictureURL
-        ])
+        ]) { error, _ in
+            guard error == nil else {
+                print("failed to write to database")
+                completion(false)
+                return
+            }
+            completion(true)
+        }
     }
     
 }
@@ -45,7 +42,15 @@ extension DatabaseManager {
 struct user {
     let firstName: String
     let lastName:String
-    let email:String
     let phoneNumber:String
-//    let profilePictureURL:String
+    let email:String
+    
+    var safeEmail: String {
+        var safeEmail = email.replacingOccurrences(of: ".", with: "^")
+        return safeEmail
+    }
+    
+    var profilePictureFileName :String {
+        return "\(safeEmail)_profile_picture.png"
+    }
 }
