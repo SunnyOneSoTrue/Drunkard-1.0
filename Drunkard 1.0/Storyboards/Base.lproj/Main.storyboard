@@ -155,21 +155,21 @@
                                     <segue destination="Bqn-rM-yrA" kind="embed" id="yfU-dd-VQr"/>
                                 </connections>
                             </containerView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bfm-vX-6UH">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bfm-vX-6UH">
                                 <rect key="frame" x="0.0" y="88" width="414" height="250"/>
                                 <color key="backgroundColor" systemColor="tintColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="a9K-9o-6oX"/>
                                 </constraints>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="vq3-81-iJY" appends="YES" id="IJC-Wd-QdG"/>
+                                    <outletCollection property="gestureRecognizers" destination="gQV-m7-j2A" appends="YES" id="eo2-jN-pMn"/>
                                 </connections>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="face.smiling" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="6VU-0k-Idt">
-                                <rect key="frame" x="107" y="113.5" width="200" height="199"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.rectangle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="6VU-0k-Idt">
+                                <rect key="frame" x="107" y="114" width="200" height="200"/>
                                 <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="0.87062264749999996" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="fa4-aL-WIq" appends="YES" id="WVu-ae-hHA"/>
+                                    <outletCollection property="gestureRecognizers" destination="9N4-6p-UiV" appends="YES" id="6dr-xb-Owe"/>
                                 </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RII-lF-wXc">
@@ -211,10 +211,10 @@
                             <constraint firstItem="bfm-vX-6UH" firstAttribute="leading" secondItem="QJ4-Is-JsM" secondAttribute="leading" id="e3f-wh-5Yy"/>
                             <constraint firstItem="fk9-y6-9a4" firstAttribute="leading" secondItem="QJ4-Is-JsM" secondAttribute="leading" constant="20" id="jMg-oV-h6v"/>
                             <constraint firstItem="3hQ-IX-bzu" firstAttribute="top" secondItem="Bew-c7-IG4" secondAttribute="bottom" constant="7" id="qXM-sP-C0a"/>
+                            <constraint firstItem="QJ4-Is-JsM" firstAttribute="bottom" secondItem="6VU-0k-Idt" secondAttribute="bottom" constant="497.5" id="rwa-E1-FHd"/>
                             <constraint firstItem="QJ4-Is-JsM" firstAttribute="bottom" secondItem="jc2-4D-s2m" secondAttribute="bottom" id="sDr-L1-vKY"/>
                             <constraint firstItem="jc2-4D-s2m" firstAttribute="leading" secondItem="QJ4-Is-JsM" secondAttribute="leading" id="tJ2-7t-caV"/>
                             <constraint firstItem="RII-lF-wXc" firstAttribute="leading" secondItem="QJ4-Is-JsM" secondAttribute="leading" constant="186" id="vww-Yp-hJX"/>
-                            <constraint firstItem="QJ4-Is-JsM" firstAttribute="bottom" secondItem="6VU-0k-Idt" secondAttribute="bottom" constant="500" id="xah-Eh-bb5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4Sv-uh-ru3">
@@ -234,14 +234,14 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rBP-9L-j6b" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="vq3-81-iJY">
+                <tapGestureRecognizer id="gQV-m7-j2A">
                     <connections>
-                        <action selector="onTapBackgroundPicture:" destination="cQA-0E-ua7" id="f3z-ka-gNd"/>
+                        <action selector="onTapBackgroundPicture:" destination="cQA-0E-ua7" id="dvK-Pi-Ah2"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="fa4-aL-WIq">
+                <tapGestureRecognizer id="9N4-6p-UiV">
                     <connections>
-                        <action selector="onTapProfilePicture:" destination="cQA-0E-ua7" id="yYx-Tb-M0K"/>
+                        <action selector="onTapProfilePicture:" destination="cQA-0E-ua7" id="St5-BH-3xy"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -578,9 +578,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="face.smiling" catalog="system" width="128" height="121"/>
         <image name="map.fill" catalog="system" width="128" height="110"/>
         <image name="message.fill" catalog="system" width="128" height="113"/>
+        <image name="person.crop.rectangle.fill" catalog="system" width="128" height="93"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="rectangle.portrait.and.arrow.right" catalog="system" width="128" height="108"/>
         <image name="square.and.pencil" catalog="system" width="128" height="115"/>

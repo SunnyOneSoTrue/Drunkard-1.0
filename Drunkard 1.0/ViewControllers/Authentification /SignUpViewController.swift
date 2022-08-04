@@ -67,7 +67,6 @@ class SignUpViewController: UIViewController {
                                 phoneNumber: self!.phoneNumberField.text!,
                                 email: email)
             
-            print("you have registered")
             DatabaseManager.shared.insertUser(with: chatUser, completion: {success in
                 if success {
                     //upload image
@@ -75,7 +74,7 @@ class SignUpViewController: UIViewController {
                     
                     let filename = chatUser.profilePictureFileName
                     
-                    storageManager.shared.uploadProfilePicture(with: data, filename: filename) { result in
+                    storageManager.shared.uploadPicture(with: data, filename: filename) { result in
                         switch result {
                         case .success(let downloadURL):
                             UserDefaults.standard.setValue(downloadURL, forKey: "profile_picture_url")
@@ -86,6 +85,8 @@ class SignUpViewController: UIViewController {
                     }
                 }
             })
+            
+            print("you have registered")
             self?.dismiss(animated: true)
             
         })

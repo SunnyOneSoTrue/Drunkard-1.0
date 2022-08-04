@@ -53,4 +53,8 @@ struct user {
     var profilePictureFileName :String {
         return "\(safeEmail)_profile_picture.png"
     }
+    
+    var backgroundPictureName :String {
+        return ("\(safeEmail)_background_picture.png")
+    }
 }
