@@ -9,6 +9,7 @@ import UIKit
 import FirebaseAuth
 import Photos
 import PhotosUI
+import SwiftUI
 
 class ProfileViewController: UIViewController {
     @IBOutlet weak var backgroundImageView: UIImageView!
@@ -22,10 +23,13 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetchUserInfo()
+        
         
         infoContainerView.alpha = 0
         profilePictureView.layer.cornerRadius = profilePictureView.frame.width/2
     }
+    
     
     @IBAction func onSegmentChange(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
@@ -114,7 +118,9 @@ class ProfileViewController: UIViewController {
             }))
             
             newActionSheet.addAction(UIAlertAction(title: "Gallery", style: .default, handler: { _ in
+                
                 //TODO: choose from gallery and upload
+                
                 var phPickerConfig = PHPickerConfiguration(photoLibrary: .shared())
                     phPickerConfig.selectionLimit = 1
                     phPickerConfig.filter = PHPickerFilter.any(of: [.images, .livePhotos])
@@ -139,6 +145,50 @@ class ProfileViewController: UIViewController {
         self.navigationController?.isNavigationBarHidden = false
         self.tabBarController?.tabBar.isHidden = false
         sender.view?.removeFromSuperview()
+    }
+    
+    func fetchUserInfo(){
+        guard let email = UserDefaults.standard.value(forKey: "email") as? String else {
+            return
+        }
+        
+        let safeEmail = DatabaseManager.safeEmail(email: email)
+        let profilePicturePath = "/images/" + safeEmail + "_profile_picture.png"
+        let backgroundPicturePath = "/images/" + safeEmail + "_background_picture.png"
+        
+        storageManager.shared.downloadURL(for: profilePicturePath) { [weak self] result in
+            switch result {
+            case .success(let url):
+                self?.downloadImage(imageview: (self?.profilePictureView)!, url: url)
+            case .failure(let error):
+                print("failed to get URL: \(error.localizedDescription)")
+            }
+        }
+        
+        storageManager.shared.downloadURL(for: backgroundPicturePath, completion: { [weak self] result in
+            switch result {
+            case .success(let url):
+                self?.downloadImage(imageview: (self?.backgroundImageView)!, url: url)
+            case .failure(let error):
+                print("failed to get URL: \(error.localizedDescription)")
+            }
+        })
+        
+    }
+    
+    func downloadImage(imageview: UIImageView, url:URL){
+        URLSession.shared.dataTask(with: url, completionHandler: {data, _, error in
+            
+            guard let data = data, error == nil else {
+                return
+            }
+            
+            DispatchQueue.main.async {
+                let image = UIImage(data: data)
+                imageview.image = image
+            }
+        }).resume()
+       
     }
     
 }
@@ -180,6 +230,7 @@ extension ProfileViewController:PHPickerViewControllerDelegate, UIImagePickerCon
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true)
     }
+    
     
 }
 

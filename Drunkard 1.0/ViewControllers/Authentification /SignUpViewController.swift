@@ -67,6 +67,8 @@ class SignUpViewController: UIViewController {
                                 phoneNumber: self!.phoneNumberField.text!,
                                 email: email)
             
+            UserDefaults.standard.setValue(email, forKey: "email")
+            
             DatabaseManager.shared.insertUser(with: chatUser, completion: {success in
                 if success {
                     //upload image

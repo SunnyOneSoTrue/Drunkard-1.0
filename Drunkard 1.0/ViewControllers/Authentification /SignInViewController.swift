@@ -80,11 +80,14 @@ class SignInViewController: UIViewController {
                 return
             }
             
+            
+            
             //TODO: remember signed in user
             
+            UserDefaults.standard.setValue(email, forKey: "email")
+            
             print("you have signed in")
-//            strongSelf.navigationController?.dismiss(animated: true)
-            self?.changeRootAndMoveToViewController()
+            strongSelf.dismiss(animated: true)
         })
     }
     
@@ -113,6 +116,5 @@ class SignInViewController: UIViewController {
     }
     
     func changeRootAndMoveToViewController() {
-        self.dismiss(animated: true)
     }
 }

@@ -13,8 +13,8 @@ final class storageManager {
     private let storage = Storage.storage().reference()
     
     /*
-     /images/(email)-profile-pircute.png
-     /images/(email)-background-picture.png
+     /images/(safeEmail)_profile_pircute.png
+     /images/(safeEmail)_background_picture.png
      */
     
     public typealias UploadPictureCompletion = (Result<String,Error>) -> Void
@@ -79,5 +79,19 @@ final class storageManager {
     public enum StorageErrors: Error {
         case failedToUpload
         case failedToDownloadURL
+    }
+    
+    
+    public func downloadURL(for path: String, completion: @escaping (Result<URL, Error>) -> Void ) {
+        let reference  = storage.child(path)
+        reference.downloadURL { url, error in
+            guard let url = url, error == nil else {
+                completion(.failure(StorageErrors.failedToDownloadURL))
+                return
+            }
+            
+            completion(.success(url))
+
+        }
     }
 }
